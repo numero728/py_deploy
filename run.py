@@ -1,18 +1,14 @@
-# 간단한 서버 구축
-
-#flask import
+# 간단한 기본 서버 구축
 from flask import Flask
 
-# Flask 인스턴스 생성
-app=Flask(__name__)
+app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return 'aws 홈페이지'
+  return 'aws 홈페이지'
 
-# 서버로 가면 실제로는 작동 안함
-# 외부에서 import로 사용하면 __name__이 '__main__'이 아니므로
-# wsgi에서 import하게 되면 엔트리는 wsgi.py
-# 이제는 패브릭을 설정한 룰에 의해 서버가 작동하게 됨
+# run.py가 엔트리포인트 일경우에만 작동
+# 리눅스 서버로 가면 wsgi.py이 엔트리포인트 이므로, 작동않함
+# 페브릭을 설정한 룰에 의해서 서버가 작동된다
 if __name__=='__main__':
-    app.run(debug=True)
+  app.run(debug=True)

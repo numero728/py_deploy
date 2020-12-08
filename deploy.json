@@ -1,9 +1,7 @@
 {
-// REPO = repository -> 코드가 저장된 저장소
-// REPO_URL은 깃허브의 주소를 쓰라는 의미
-"REPO_URL": "https://github.com/numero728/deploy",
-"PROJECT_NAME":"deploy",
-"REMOTE_HOST":"ec2-52-78-211-149.ap-northeast-2.compute.amazonaws.com",
-"REMOTE_HOSTS_SSH":"52.78.211.149",
-"REMOTE_USER":"ubuntu"
+  "REPO_URL":"https://github.com/edu-kenshi/deploy",
+  "PROJECT_NAME":"deploy",
+  "REMOTE_HOST":"ec2-13-209-3-106.ap-northeast-2.compute.amazonaws.com",
+  "REMOTE_HOST_SSH":"13.209.3.106",
+  "REMOTE_USER":"ubuntu"
 }
