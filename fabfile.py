@@ -175,6 +175,7 @@ def _make_virtualhost():
     )
     sudo('echo {} > /etc/apache2/sites-available/{}.conf'.format(script, PROJECT_NAME))
     sudo('a2ensite {}.conf'.format(PROJECT_NAME))
+    sudo('a2dissite etc/apache2/sites-available/000-default.conf')
 
 # 프로젝트 폴더및 아파치 연동된 부분에 관련되 권한 조정
 # 리눅스 상에서 누구나 파일/디렉토리 상에서 엑세스할수 있게(수정포함) 조정
